@@ -1,10 +1,7 @@
 add = document.getElementById("add");
 one = document.getElementById("todo1");
 two = document.getElementById("todo2");
-//    three = one+" " +two;
-// three = one;
-// add.addEventListener("click",()=>{
-   
+  
    function update()
    {
       one = document.getElementById("todo1").value;
@@ -21,8 +18,8 @@ two = document.getElementById("todo2");
      }
      arr.push(three)
      localStorage.setItem("user",JSON.stringify(arr))
-      document.getElementById("todo1").value=''
-      document.getElementById("todo2").value=''
+      document.getElementById("todo1").value='';
+      document.getElementById("todo2").value='';
 
       adi();
    }
@@ -59,7 +56,7 @@ two = document.getElementById("todo2");
         `
       });
       tableBody.innerHTML=str+" ";
-// })
+
 }
 add = document.getElementById("add");
 add.addEventListener("click",update);
@@ -82,14 +79,6 @@ function del(index)
       adi();
    }
  }
-
-//  var list = document.querySelector('tr');
-// list.addEventListener("click", function(e) {
-//   if (e.target.tagName === 'th') {
-//     e.target.classList.toggle('checked');
-//   }
-// }, false);
-
 
 function sort1()
 {
@@ -172,12 +161,12 @@ function save()
    final[1] = two.value;
    let result = final[0] +" " +final[1];  // firstName  lastName 
    ar[saveindex[0]] = result;
+   document.getElementById("todo1").value=''
+      document.getElementById("todo2").value=''
    // console.log(result);
    // console.log(arr);
    let fu = localStorage.setItem("user",JSON.stringify(ar));
    adi();
-
-   // console.log(fu);
 
 }
 
